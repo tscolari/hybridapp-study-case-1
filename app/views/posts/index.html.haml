@@ -1,0 +1,5 @@
+.list-group
+  - @posts.each do |post|
+    = link_to post_path(post), class: 'list-group-item' do
+      %h4.list-group-item-heading= post.title
+      %p.list-group-item-text= post.created_at

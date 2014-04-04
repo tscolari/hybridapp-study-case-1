@@ -1,0 +1,4 @@
+.list-group
+  - @contacts.each do |contact|
+    = link_to contact_path(contact), class: 'list-group-item' do
+      %h4.list-group-item-heading= contact.name

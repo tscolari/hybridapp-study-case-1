@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title HybridApp
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  %body
+    .navbar.navbar-default(role="navigation")
+      .container
+        .navbar-header
+          %button.navbar-toggle(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand(href="/")
+            HybridApp
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to posts_path do
+                Posts
+            %li
+              = link_to contacts_path do
+                Contacts
+
+    .container
+      = yield
